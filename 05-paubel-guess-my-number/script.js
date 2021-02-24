@@ -29,14 +29,14 @@ const displayMessage = function (message) {
 document.querySelector('.again').style.display = 'none';
 console.log(`correct number ${secretNumber}`);
 document.querySelector('.check').addEventListener('click', function () {
-  const guess = Number(document.querySelector('.guess').value);
-  //console.log(guess, typeof guess);
-
-  //No input
-  if (!guess) {
-    // document.querySelector('.message').textContent = '⛔️ No number';
+  const inputChar = document.querySelector('.guess').value;
+  const guess = Number(inputChar);
+  //console.log(inputChar, typeof inputChar);
+  //console.log(typeof guess);
+  if (inputChar === '') {
     displayMessage('⛔️ No number');
-    //Player wins
+  } else if (guess > 100 || guess <= 0) {
+    displayMessage('⛔️ Your number is not between 1 and 100');
   } else if (guess === secretNumber) {
     document.querySelector('.again').style.display = 'block';
     displayMessage('🎉 Correct Number! ');
