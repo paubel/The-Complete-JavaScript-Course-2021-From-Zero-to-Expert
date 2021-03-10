@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Guess My Number!</title>
+</head>
+
+<body>
+  <header>
+    <h1>Rock Scissors Paper</h1>
+    <button class="btn restart">Restart</button>
+
+  </header>
+  <aside>
+    <p id="infotext">Choose!</p>
+    <button class="btn rock" id='0'>Rock</button>
+    <button class="btn scissors" id='1'>Scissors</button>
+    <button class="btn paper" id='2'>Paper</button>
+  </aside>
+  <main>
+
+    <section class="player player--0 player--active">
+      <img src="symbol-x.png" alt="Playing dice" class="symbol symbol--0" />
+      <h2 class="name" id="name--0">Player score:</h2>
+      <p class="score" id="score--0">0</p>
+      <div class="current">
+        <!-- <p class="current-label">Your choice:</p>
+        <p class="current-score" id="choice--0">Scissors</p> -->
+      </div>
+    </section>
+    <section class="player player--1">
+      <img src="symbol-x.png" alt="Playing dice" class="symbol symbol--1" />
+
+      <h2 class="name" id="name--1">Computer score:</h2>
+      <p class="score" id="score--1">0</p>
+      <div class="current">
+        <!-- <p class="current-label">Computer choice:</p>
+        <p class="current-score" id="choice--1">Rock</p> -->
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
